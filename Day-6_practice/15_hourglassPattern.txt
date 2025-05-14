@@ -1,0 +1,54 @@
+// * * * * *   1
+//  * * * *    2
+//   * * *     3
+//    * *      4
+//     *      5
+//    * *      6
+//   * * *     7
+//  * * * *    8
+// * * * * *   9
+
+#include <stdio.h>
+void main()
+{
+	int limit=5;
+
+	// printf("Enter limit:");
+	// scanf("%d", &limit);
+
+
+	// 2*limit
+	for (int i = 1; i < 10; i++)
+	{
+		// i<= limit
+		if (i <= 5) //1->5
+		{
+			// Upper Inverted Triangle
+			for (int j = 1; j <= i; j++)
+			{
+				printf(" ");
+			}
+			for (int j = i; j <= 5; j++)
+			{
+				printf("* ");
+			}
+			printf("\n");
+		}
+		else // limit+1 -> 2*limit          i->is the variable
+		{	//6 -> 9
+			// Lower Triangle
+			// space: 4->1
+			// 6    ->   10
+			for (int j = i ; j < 10; j++)
+			{
+				printf(" ");
+			}
+			// *: 1->(<6-3)=> 2->5
+			for (int j = 1; j < i - 3; j++)
+			{
+				printf("* ");
+			}
+			printf("\n");
+		}
+	}
+}
